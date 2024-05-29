@@ -1,16 +1,18 @@
+using STORYGAME;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using System.IO.Enumeration;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewStory", menuName = "ScriptableObjects/StoryModel")]
+[CreateAssetMenu(fileName = "NewStory" , menuName = "ScriptableObjects/StoryModel")]
 public class StoryModel : ScriptableObject
 {
+
     public int storyNumber;
     public Texture2D mainImage;
 
-    public enum STORYTYPE
-    {
+    public enum STORYTYPE 
+    { 
         MAIN,
         SUB,
         SERIAL
@@ -25,7 +27,7 @@ public class StoryModel : ScriptableObject
     public Option[] options;
 
     [System.Serializable]
-    public class Option
+    public class Option 
     {
         public string optionText;
         public string buttonText;
@@ -33,11 +35,11 @@ public class StoryModel : ScriptableObject
         public EventCheck eventCheck;
     }
 
+
     [System.Serializable]
     public class EventCheck
     {
         public int checkvalue;
-
         public enum EventType : int
         {
             NONE,
@@ -46,31 +48,30 @@ public class StoryModel : ScriptableObject
             CheckDEX,
             CheckCON,
             CheckINT,
-            CheckWIS,
+            CheckWLS,
             CheckCHA
         }
 
-        public EventType eventType;
+        public EventType eventtype;
 
         public Result[] sucessResult;       //선택지에 대한 효과 배열
         public Result[] failResult;
     }
     [System.Serializable]
-    public class Result                 // 결과값 정보 데이터
+    public class Result                 //결과값 정보 데이터
     {
-        public enum ResultType : int
+        public enum ResultType: int
         {
             ChangeHp,
             ChangeSp,
             AddExperience,
             GoToShop,
             GoToNextStory,
-            GoTORandomStory
+            GoToRandomStory
         }
 
-        public ResultType resultType;
+        public ResultType resulttype;
         public int value;
         public Stats stats;
-
     }
 }
