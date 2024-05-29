@@ -12,9 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb248ac9e2790464cad9a7faeb590659, type: 3}
   m_Name: NewStory 1
   m_EditorClassIdentifier: 
-  storyNumber: 0
+  storyNumber: 1
   mainImage: {fileID: 0}
   storyType: 0
   storyDone: 0
-  storyText: 
-  options: []
+  storyText: "\uD14C\uC2A4\uD2B8 \uBA54\uC138\uC9C0"
+  options:
+  - optionText: "\uC120\uD0DD\uC9C01"
+    buttonText: "\uC120\uD0DD\uC9C01"
+    eventCheck:
+      checkvalue: 0
+      eventType: 0
+      sucessResult: []
+      failResult: []
+  - optionText: "\uC120\uD0DD\uC9C02"
+    buttonText: "\uC120\uD0DD\uC9C02"
+    eventCheck:
+      checkvalue: 0
+      eventType: 0
+      sucessResult: []
+      failResult: []
